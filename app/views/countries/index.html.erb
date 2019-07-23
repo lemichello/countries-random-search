@@ -1,4 +1,4 @@
-<h1>Countries (<%= @countries_to_display.size %>)</h1>
+<h1>Countries (<%= @display_countries.size %>)</h1>
 <table border="1">
   <tr>
     <th>Flag</th>
@@ -9,7 +9,7 @@
     <th>Borders with</th>
     <th>Lat/Long</th>
   </tr>
-  <% @countries_to_display.each do |country| %>
+  <% @display_countries.each do |country| %>
     <tr class=<%= cycle('even', 'odd') %>>
       <td><%= image_tag country['flag'], size: "100x50", class: "flag" %></td>
       <td><%= country['name'] %></td>
